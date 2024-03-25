@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="bank.css"/>
+    <title>Bank</title>
+</head>
+<body>
+    <div id="newElementAdded">
+        <form action="" id="cardAddForm">
+            <h1 style="text-align:center;margin-bottom:30px;">Add Card<span style="float:right;" id="cardAddFormClose"><i class="fa-solid fa-xmark"></i></span></h1>
+            <label for="">Card No</label>
+            <input type="text" id="cardNo"/>
+            <label for="">Card Type</label>
+            <input type="text" id="cardType"/>
+            <label for="">Card Amount</label>
+            <input type="text" id="cardAmount"/>
+            <label for="">Currency Code</label>
+            <input type="text" id="currencyCode"/>
+            <label for="">Account Type</label>
+            <input type="text" id="accountType"/>
+            <input type="submit" value="Add Card" id="cardData"/>
+        </form>
+    </div>
+
+    <div class="main-container">
+        <div class="child-container">
+            <div class="rightSideBar">
+                <div class="logo" style="display:flex;justify-content:center;align-items:center;margin-top:20px;">
+                    <h2>Logo</h2>
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-table-cells-large fa-1.5x"></i><span>Dashboard</span></li>
+                    <li><i class="fa-solid fa-credit-card fa-1.5x"></i><span>Transfers</span></li>
+                    <li><i class="fa-solid fa-credit-card fa-1.5x"></i><span>Your Cards</span></li>
+                    <li><i class="fa-solid fa-gear fa-1.5x"></i><span>Settings</span></li>
+                </ul>
+                <ol>
+                    <li><i class="fa-solid fa-user fa-1.5x"></i></li>
+                    <li><i class="fa-solid fa-arrow-right-from-bracket fa-1.5x"></i><li>
+                </ol>
+            </div>
+            <div class="middleBar">
+                <div class="middleBar-up">
+                    <div class="dashboard">
+                        <h2>Dashboard</h2>
+                    </div>
+                    <div class="search-notify">
+                        <ul>
+                            <li><i class="fa-solid fa-magnifying-glass fa-1.5x"></i></li>
+                            <li><i class="fa-solid fa-bell  fa-1.5x" style="position:relative;"></i><span style="position:absolute;height:5px;width:5px;border-radius:50%;background-color:red;"></span></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical  fa-1.5x"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="middleBar-middle">
+                    <div class="card-container">
+                        <div class="card-one">
+                            <img src="images/mastercard-removebg-preview.png" alt="">
+                        </div>
+                        <div class="card-two">
+                            <div style="display:flex;justify-content:space-between;"><h3 id="accountType">Personal account<h3><span id="cardAdd"><i class="fa-solid fa-plus"></i>Add Card</span></div>
+                            <div style="display:flex;margin:10px 5px"><h2 id="money">41,117.28</h2><span id="currency" style="margin-left:10px;margin-top:30px;">EUR</span></div>
+                            <ul>
+                                <li><span><i class="fa-solid fa-arrow-up fa-1.5x"></i></span><h5>Send</h5></li>
+                                <li><span><i class="fa-solid fa-arrow-down fa-1.5x"></i></span><h5>Receive</h5></li>
+                                <li><span><i class="fa-regular fa-clipboard fa-1.5x"></i></span><h5>Copy</h5></li>
+                                <li><span><i class="fa-solid fa-ban fa-1.5x"></i></span><h5>Block</h5></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="middleBar-bottom">
+                    <div class="middleBar-bottom-leftSide">
+                        <div class="middleBar-bottom-leftSide-container">
+                           <h1>Transactions<span>Show more</span></h1>
+                            <h5>Today</h5>
+                            <div id="bar">
+                                <span style="height:35px;width:35px;border-radius:50%;position:relative;background-color:rgba(109, 107, 107, 0.1);display:block;"><i class="fa-solid fa-arrow-down fa-1.5x" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></i></span>
+                                <span style="font-size:10px;">From Amey LTD<br/>Bank Transfer</span>
+                                <span style="font-size:12px;color:var(--secondary-color);">+1200.00 EUR</span>
+                            </div>
+                            <div id="bar">
+                                <span style="height:35px;width:35px;border-radius:50%;position:relative;background-color:rgba(109, 107, 107, 0.1);display:block;"><i class="fa-solid fa-arrow-right fa-1.5x fa-rotate-by" style="--fa-rotate-angle: -45deg;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></i></span>
+                                <span style="font-size:10px;">****8545<br/>Sent to card</span>
+                                <span style="font-size:10px;">-300.00 EUR</span>
+                            </div>
+                            <div id="bar">
+                                <span style="height:35px;width:35px;border-radius:50%;position:relative;background-color:rgba(109, 107, 107, 0.1);display:block;"><img src="https://www.clinicdermatech.com/images/men-service-face.jpg" height="100%" width="100%" style="border-radius:50%;"/></span>
+                                <span style="font-size:10px;">To Jerome Bell<br/>Sent to Wallet</span>
+                                <span style="font-size:10px;">-500.00 EUR</span>
+                            </div>
+                            <h5>09/08/2022</h5>
+                            <div id="bar">
+                                <span style="height:35px;width:35px;border-radius:50%;position:relative;background-color:rgba(109, 107, 107, 0.1);display:block;"><i class="fa-solid fa-arrow-right fa-1.5x fa-rotate-by" style="--fa-rotate-angle: -45deg;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></i></span>
+                                <span style="font-size:10px;">...6127<br/>Sent to card</span>
+                                <span style="font-size:10px;">-40.00 EUR</span>
+                            </div>
+                            <div id="bar">
+                                <span style="height:35px;width:35px;border-radius:50%;position:relative;background-color:rgba(109, 107, 107, 0.1);display:block;"><i class="fa-solid fa-arrow-down fa-1.5x" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></i></span>
+                                <span style="font-size:10px;">From Loop LTD<br/>Bank transfer</span>
+                                <span style="font-size:12px;color:var(--secondary-color);">+300.00 EUR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middleBar-bottom-rightSide">
+                        <div style="padding:10px 10px;">
+                            <h1>Your Statistics<span><select name="" id=""><option>This Week</option><option>Today</option></select></span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="leftSideBar">
+                <div class="leftSideBar-container">
+                    <h4>Smart Invest<span>show more</span></h4>
+                    <div id="btn-container">
+                        <span>Popular</span>
+                        <span>Tech</span>
+                        <span>Social Media</span>
+                        <span>Gaming</span>
+                    </div>
+                    <div style="margin-top:40px;">
+                        <div id="invest-bar">
+                            <div>
+                                <span style="height:40px;width:40px;background:rgba(255,255,255,0.1);display:flex;justify-content:center;align-items:center;"><i class="fa-solid fa-charging-station fa-1.5x"></i></span>
+                                <div id="invest-company">
+                                    <span>Tesla</span>
+                                    <span style="font-size:10px;color:gray;">TSLA</span>
+                                </div>
+                                <div id="percentage">
+                                    <span style="font-size:14px;">$797.44</span>
+                                    <span style="font-size:14px;color:var(--secondary-color);">+34,42(4.49%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="invest-bar">
+                            <div>
+                                <span style="height:40px;width:40px;background:rgba(255,255,255,0.1);display:flex;justify-content:center;align-items:center;"><i class="fa-solid fa-charging-station fa-1.5x"></i></span>
+                                <div id="invest-company">
+                                    <span>Tesla</span>
+                                    <span style="font-size:10px;color:gray;">TSLA</span>
+                                </div>
+                                <div id="percentage">
+                                    <span style="font-size:14px;">$797.44</span>
+                                    <span style="font-size:14px;color:var(--secondary-color);">+34,42(4.49%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="invest-bar">
+                            <div>
+                                <span style="height:40px;width:40px;background:rgba(255,255,255,0.1);display:flex;justify-content:center;align-items:center;"><i class="fa-solid fa-charging-station fa-1.5x"></i></span>
+                                <div id="invest-company">
+                                    <span>Tesla</span>
+                                    <span style="font-size:10px;color:gray;">TSLA</span>
+                                </div>
+                                <div id="percentage">
+                                    <span style="font-size:14px;">$797.44</span>
+                                    <span style="font-size:14px;color:var(--secondary-color);">+34,42(4.49%)</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <h1 style="font-size:15px;font-weight:500;margin-top:40px;">Fast Transfer<span style="font-size:10px;float:right;font-weight:500;">+ <span style="color:var(--secondary-color);margin-left: 4px;">Add People</span></span></h1>
+                    <ul style="list-style:none;margin-top:20px;width: 100%;height:80px;">
+                        <li style="float:left;margin:0px 8px;"><span style="height:50px;width:50px;border-radius:50%;background-color:rgba(255,255,255,0.1);display:block;position:relative;"><i class="fa-solid fa-magnifying-glass fa-rotate-90 fa-1.5x" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></i></span></li>
+                        <li style="float:left;margin:0px 8px;"><span style="height:50px;width:50px;border-radius:50%;background-color:rgba(255,255,255,0.1);display:block;"><img src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1711238400&semt=ais" height="100%" width="100%" style="border-radius: 50%;"/></span></li>
+                        <li style="float:left;margin:0px 8px;"><span style="height:50px;width:50px;border-radius:50%;background-color:rgba(255,255,255,0.1);display:block;"><img src="https://images.unsplash.com/photo-1616002411355-49593fd89721?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdvbWFuJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D" height="100%" width="100%" style="border-radius: 50%;"/></span></li>
+                        <li style="float:left;margin:0px 8px;"><span style="height:50px;width:50px;border-radius:50%;background-color:rgba(255,255,255,0.1);display:block;"><img src="https://assets.vogue.in/photos/607d10139958e484805743e0/2:3/w_2560%2Cc_limit/Ira%2520Guha%2C%2520founder%2520and%2520CEO%2520Asan%2520Cup.jpg" height="100%" width="100%" style="border-radius: 50%;"/></span></li>
+                        <li style="float:left;margin:0px 8px;"><span style="height:50px;width:50px;border-radius:50%;background-color:rgba(255,255,255,0.1);display:block;"><img src="https://globalventuring.com//content/uploads/2023/03/Sonam-Jain-landscape.png" height="100%" width="100%" style="border-radius: 50%;"/></span></li>
+                    </ul>
+                    <form action="" id="moneyTransferForm">
+                        <div><label for="">From</label><input type="text" value="mastercard****12345" name="from"/></div>
+                        <div><label for="">To</label><input type="text" value="0298 8756 9089 7647" name="to"/></div>
+                        <div>
+                            <label for="">Amount</label><input type="text" value="$3,456" name="amountToSend" style="margin-left:15px;"/>
+                            <label for="">CVV</label><input type="text" value="***" name="cvv" style="margin-left:15px;"/>
+                        </div>
+                        <input type="submit"  name="transfer" value="Transfer"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bank.js"></script>
+</body>
+</html>
